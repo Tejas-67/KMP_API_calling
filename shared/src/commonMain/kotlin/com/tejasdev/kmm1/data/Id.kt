@@ -7,7 +7,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Id(
     @SerialName("name")
-    val name: String,
-    @SerialName("value")
-    val value: String
+    val name: String
 )

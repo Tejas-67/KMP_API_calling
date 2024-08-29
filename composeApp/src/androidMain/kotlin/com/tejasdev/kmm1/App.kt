@@ -25,32 +25,6 @@ import kmm1.composeapp.generated.resources.compose_multiplatform
 @Composable
 fun App() {
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click !")
-            }
-            AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
-                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
-                }
-            }
-            ShowLogo()
-        }
-    }
-}
 
-@Preview
-@Composable
-fun ShowLogo(){
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(40.dp)
-            .border(width = 4.dp, color = Color.Black, shape = RoundedCornerShape(12.dp))
-    ){
-        Image(painter = painterResource(resource = Res.drawable.compose_multiplatform) , contentDescription = null)
     }
 }

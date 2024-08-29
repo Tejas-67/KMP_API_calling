@@ -26,6 +26,9 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.android)
             implementation(libs.android.driver)
+            implementation(libs.androidx.lifecycle.runtime.ktx)
+            implementation(libs.androidx.lifecycle.viewmodel.ktx)
+            implementation(libs.coil)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
